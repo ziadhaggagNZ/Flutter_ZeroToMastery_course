@@ -11,7 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text("Fluttar Basics"),),
+        appBar: AppBar(
+          centerTitle: true,
+          title: const Text("Fluttar Basics"),),
         body: const Center(
           child: Text("Hello world!"),
         ),
