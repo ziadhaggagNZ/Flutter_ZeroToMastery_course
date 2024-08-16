@@ -15,18 +15,34 @@ class MyApp extends StatelessWidget {
         centerTitle: true,
         title: const Text("Fluttar Basics"),
       ),
-      body:  Center(
-        child:  Container(
-          height: 200,
-          width: 200,
-          decoration: BoxDecoration(color: Colors.blue,borderRadius: BorderRadius.circular(20)),
-          child:  Center(
-            child: Text(
-              "Hello world!",
-              style: TextStyle(color: Colors.red, fontSize: 20),
+      body:  Container(
+
+        decoration: BoxDecoration(color: Colors.blue,borderRadius: BorderRadius.circular(20)),
+        child:  Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            const SizedBox(
+              child: Text("data",style: TextStyle( fontSize: 20),),
             ),
-          ),
-        ),
+             Container(
+              color: Colors.red,
+              child: Text(
+                "Hello world!",
+                style: TextStyle( fontSize: 20),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(5),
+              margin: EdgeInsets.all(5),
+              color: Colors.green,
+              child: Text(
+                "Hello world!",
+                style: TextStyle( fontSize: 20),
+              ),
+            ),
+          ],
+        )
       ),
     ));
   }
