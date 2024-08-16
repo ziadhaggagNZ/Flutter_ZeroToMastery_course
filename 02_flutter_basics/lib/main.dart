@@ -17,8 +17,10 @@ class MyApp extends StatelessWidget {
       ),
       body:  Container(
 
-        decoration: BoxDecoration(color: Colors.blue,borderRadius: BorderRadius.circular(20)),
-        child:  Column(
+        decoration: BoxDecoration(
+          //color: Colors.blue,
+        borderRadius: BorderRadius.circular(20)),
+        child:  Row(
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -26,20 +28,23 @@ class MyApp extends StatelessWidget {
               child: Text("data",style: TextStyle( fontSize: 20),),
             ),
              Container(
-              color: Colors.red,
-              child: Text(
+              //color: Colors.red,
+              child: const Text(
                 "Hello world!",
                 style: TextStyle( fontSize: 20),
               ),
             ),
             Container(
-              padding: EdgeInsets.all(5),
-              margin: EdgeInsets.all(5),
-              color: Colors.green,
-              child: Text(
-                "Hello world!",
+              // padding: EdgeInsets.all(5),
+              // margin: EdgeInsets.all(5),
+              //color: Colors.green,
+              child: const Expanded(
+                child: Text(
+                "Hello world! my name is ziad haggag",
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle( fontSize: 20),
-              ),
+              ),),
             ),
           ],
         )
