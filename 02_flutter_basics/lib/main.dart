@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
         title: const Text("Fluttar Basics"),
       ),
       body: Container(
+        width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
               //color: Colors.blue,
               borderRadius: BorderRadius.circular(20)),
@@ -68,13 +70,21 @@ class MyApp extends StatelessWidget {
                         style: TextStyle(color: Colors.red, fontSize: 20),
                       ))
                 ]),
-                SizedBox(
-                  height: 150,
-                ),
+                SizedBox(height: 100,),
                   Container(
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.green,
-                  child: Center(child: Text("data")),
+                    height: 300,
+                    width: 300,
+                    color: Colors.yellow,
+                  child: LayoutBuilder(builder: (context,Constraints){
+                    return Center(
+                      child: Container(
+                        height: Constraints.maxHeight * 0.8,
+                        width: Constraints.maxWidth * 0.8,
+                        color: Colors.blue,
+                        child: Center(child: const Text("Layout Builder Example")),
+                      ) ,
+                    );
+                  })
                 ),
                 SizedBox(
                   height: 200,
