@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/presentation/widget_examples/buttens_example.dart';
 import 'package:flutter_basics/presentation/widget_examples/widgets/HelloWordExample.dart';
 import 'package:flutter_basics/presentation/widget_examples/widgets/LayoutBuilderExample.dart';
 import 'package:flutter_basics/presentation/widget_examples/widgets/MyPhotoStack.dart';
@@ -46,6 +47,8 @@ class WidgetExamplesScreen extends StatelessWidget {
                   height: 200,
                 ),
                 Myphotostack(),
+                SizedBox(height: 100,),
+                ButtensExample(),
                 SizedBox(height: 100,),
                   Layoutbuilderexample(),
                 SizedBox(
