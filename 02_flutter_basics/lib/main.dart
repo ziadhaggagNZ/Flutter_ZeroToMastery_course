@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
                       ))
                 ]),
                 SizedBox(
-                  height: 100,
+                  height: 150,
                 ),
                   Container(
                     width: MediaQuery.of(context).size.width,
