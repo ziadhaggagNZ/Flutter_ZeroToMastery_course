@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
         decoration: BoxDecoration(
           //color: Colors.blue,
         borderRadius: BorderRadius.circular(20)),
-        child:  Row(
-          crossAxisAlignment: CrossAxisAlignment.end,
+        child:  Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             const SizedBox(
@@ -34,18 +34,37 @@ class MyApp extends StatelessWidget {
                 style: TextStyle( fontSize: 20),
               ),
             ),
-            Container(
-              // padding: EdgeInsets.all(5),
-              // margin: EdgeInsets.all(5),
-              //color: Colors.green,
-              child: const Expanded(
-                child: Text(
-                "Hello world! my name is ziad haggag",
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle( fontSize: 20),
-              ),),
+            // Container(
+            //   // padding: EdgeInsets.all(5),
+            //   // margin: EdgeInsets.all(5),
+            //   //color: Colors.green,
+            //   child: const Expanded(
+            //     child: Text(
+            //     "Hello world! my name is ziad haggag",
+            //     maxLines: 1,
+            //     overflow: TextOverflow.ellipsis,
+            //     style: TextStyle( fontSize: 20),
+            //   ),),
+            //),
+            Stack(
+              children: [
+                SizedBox(
+                height: 200,
+                width: 200,
+                child: Image.asset("assets/ziad.png",fit: BoxFit.cover,)
+                ),
+                Positioned(
+                  top: 30,
+                  left: 50,
+                  child: Text("ziad haggag",style: TextStyle(color: Colors.red,fontSize: 20),)
+                  )
+              ]
             ),
+              SizedBox(
+                height: 100,
+                width: 100,
+                child: CircleAvatar(backgroundImage: AssetImage("assets/ziad.png"),),
+              )
           ],
         )
       ),
