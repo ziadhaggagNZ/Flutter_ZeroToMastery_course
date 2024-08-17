@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/presentation/componants/custom_button.dart';
 import 'package:flutter_basics/presentation/widget_examples/buttens_example.dart';
 import 'package:flutter_basics/presentation/widget_examples/widgets/HelloWordExample.dart';
 import 'package:flutter_basics/presentation/widget_examples/widgets/LayoutBuilderExample.dart';
@@ -15,22 +16,22 @@ class WidgetExamplesScreen extends StatelessWidget {
         title: const Text("Fluttar Basics"),
       ),
       body: Container(
-        width: MediaQuery.of(context).size.width,
+          width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
               //color: Colors.blue,
               borderRadius: BorderRadius.circular(20)),
-          child: const SingleChildScrollView(
+          child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               //mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                SizedBox(
+                const SizedBox(
                   child: Text(
                     "data",
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
-                Hellowordexample(),
+                const Hellowordexample(),
                 // Container(
                 //   // padding: EdgeInsets.all(5),
                 //   // margin: EdgeInsets.all(5),
@@ -43,19 +44,38 @@ class WidgetExamplesScreen extends StatelessWidget {
                 //     style: TextStyle( fontSize: 20),
                 //   ),),
                 //),
-                SizedBox(
+                const SizedBox(
                   height: 200,
                 ),
-                Myphotostack(),
-                SizedBox(height: 100,),
-                ButtensExample(),
-                SizedBox(height: 100,),
-                  Layoutbuilderexample(),
-                SizedBox(
+                const Myphotostack(),
+                const SizedBox(
+                  height: 100,
+                ),
+                const ButtensExample(),
+                const SizedBox(
+                  height: 100,
+                ),
+                const Layoutbuilderexample(),
+                const SizedBox(
                   height: 200,
                 ),
-              
-                SizedBox(
+                CustomButton(
+                    onTap: () {
+                      print("tapped");
+                    },
+                    icon: Icons.ac_unit),
+                const SizedBox(
+                  height: 200,
+                ),
+                CustomButtonGester(
+                    onTap: () {
+                      print("CustomButtonGester tapped");
+                    },
+                    text: "Button Gester"),
+                const SizedBox(
+                  height: 100,
+                ),
+                const SizedBox(
                   height: 100,
                   width: 100,
                   child: CircleAvatar(
@@ -67,7 +87,4 @@ class WidgetExamplesScreen extends StatelessWidget {
           )),
     );
   }
-
-
-
 }

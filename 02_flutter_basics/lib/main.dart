@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_basics/presentation/widget_examples/widget_examples_screen.dart';
 
 void main() {
