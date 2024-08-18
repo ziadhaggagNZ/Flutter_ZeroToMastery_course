@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/presentation/counter/counter_screen.dart';
 import 'package:flutter_basics/presentation/widget_examples/widget_examples_screen.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: WidgetExamplesScreen()
+        home: CounterScreen() //WidgetExamplesScreen()
          );
   }
 }

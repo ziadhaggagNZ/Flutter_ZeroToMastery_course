@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
-class ButtensExample extends StatelessWidget {
+class ButtensExample extends StatefulWidget {
   const ButtensExample({super.key});
 
+  @override
+  State<ButtensExample> createState() => _ButtensExampleState();
+}
+
+class _ButtensExampleState extends State<ButtensExample> {
+    bool switchState = true;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -28,8 +34,13 @@ class ButtensExample extends StatelessWidget {
               },
                icon: Icon(Icons.agriculture_rounded)),
 
-               Switch(value: true, onChanged: (value) {
-                print(value);  
+               Switch(
+                value: switchState,
+                 onChanged: (value) {
+                setState(() {
+                  switchState = value;
+                  print(switchState);
+                });  
                },
                )
       ],
