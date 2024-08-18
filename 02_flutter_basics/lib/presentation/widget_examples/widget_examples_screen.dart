@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/application/theme_service.dart';
 import 'package:flutter_basics/presentation/componants/custom_button.dart';
-import 'package:flutter_basics/presentation/navigation_example_screens/screen_one.dart';
-import 'package:flutter_basics/presentation/navigation_example_screens/screen_two.dart';
 import 'package:flutter_basics/presentation/widget_examples/buttens_example.dart';
 import 'package:flutter_basics/presentation/widget_examples/widgets/HelloWordExample.dart';
 import 'package:flutter_basics/presentation/widget_examples/widgets/LayoutBuilderExample.dart';
 import 'package:flutter_basics/presentation/widget_examples/widgets/MyPhotoStack.dart';
 import 'package:flutter_basics/presentation/widget_examples/widgets/person.dart';
+import 'package:provider/provider.dart';
 
 class WidgetExamplesScreen extends StatelessWidget {
   const WidgetExamplesScreen({super.key});
@@ -98,6 +98,11 @@ class WidgetExamplesScreen extends StatelessWidget {
               ],
             ),
           )),
+          floatingActionButton: FloatingActionButton(onPressed: () {
+            Provider.of<ThemeService>(context,listen: false).toggleTheme();
+          },
+          child: Icon(Icons.dark_mode),
+          ),
     );
   }
 }

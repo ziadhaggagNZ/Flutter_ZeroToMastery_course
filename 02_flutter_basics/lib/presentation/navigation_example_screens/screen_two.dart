@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basics/presentation/navigation_example_screens/screen_one.dart';
 
 class ScreenTwo extends StatelessWidget {
   const ScreenTwo({super.key});
