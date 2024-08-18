@@ -4,6 +4,7 @@ import 'package:flutter_basics/presentation/widget_examples/buttens_example.dart
 import 'package:flutter_basics/presentation/widget_examples/widgets/HelloWordExample.dart';
 import 'package:flutter_basics/presentation/widget_examples/widgets/LayoutBuilderExample.dart';
 import 'package:flutter_basics/presentation/widget_examples/widgets/MyPhotoStack.dart';
+import 'package:flutter_basics/presentation/widget_examples/widgets/person.dart';
 
 class WidgetExamplesScreen extends StatelessWidget {
   const WidgetExamplesScreen({super.key});
@@ -48,6 +49,11 @@ class WidgetExamplesScreen extends StatelessWidget {
                   height: 200,
                 ),
                 const Myphotostack(),
+                const SizedBox(
+                  height: 200,
+                ),
+                const Person(pictureUrl: "https://raw.githubusercontent.com/ziadhaggagNZ/Flutter_ZeroToMastery_course/master/02_flutter_basics/assets/ziad.png",
+                 name: "ziad Haggag", age: "24", country: "egypt", job: "engineer"),
                 const SizedBox(
                   height: 100,
                 ),
