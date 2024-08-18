@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/presentation/counter/counter_screen.dart';
 import 'package:flutter_basics/presentation/list/list_screen.dart';
+import 'package:flutter_basics/presentation/theme_animation/theme_animation_screen.dart';
 import 'package:flutter_basics/presentation/widget_examples/widget_examples_screen.dart';
 
 class RootBottomNavigation extends StatefulWidget {
@@ -20,10 +21,13 @@ class _BottomNavigationState extends State<RootBottomNavigation> {
         children: const [
           WidgetExamplesScreen(),
           CounterScreen(),
-          ListScreen()
+          ListScreen(),
+          ThemeAnimationScreen(),
+
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.blue,
         selectedItemColor: Colors.red,
         onTap: (index) {
@@ -36,6 +40,7 @@ class _BottomNavigationState extends State<RootBottomNavigation> {
         BottomNavigationBarItem(icon: Icon(Icons.star), label: "example"),
         BottomNavigationBarItem(icon: Icon(Icons.add), label: "counter"),
         BottomNavigationBarItem(icon: Icon(Icons.list), label: "list"),
+        BottomNavigationBarItem(icon: Icon(Icons.color_lens), label: "Theme"),
       ]),
     );
   }
