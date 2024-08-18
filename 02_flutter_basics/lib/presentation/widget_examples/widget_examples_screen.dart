@@ -74,11 +74,7 @@ class WidgetExamplesScreen extends StatelessWidget {
                 ),
                 CustomButton(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const ScreenOne(),
-                          ));
+                       Navigator.pushNamed(context, "/screenOne");
                     },
                     icon: Icons.ac_unit),
                 const SizedBox(
@@ -86,11 +82,7 @@ class WidgetExamplesScreen extends StatelessWidget {
                 ),
                 CustomButtonGester(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const ScreenTwo(),
-                          ));
+                      Navigator.pushNamed(context, "/screenTwo");
                     },
                     text: "Button Gester"),
                 const SizedBox(
