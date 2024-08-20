@@ -60,8 +60,9 @@ class AdvicePage extends StatelessWidget {
                 } else if (state is AdvicerStateLooded) {
                   return AdviceField(advice: state.advice);
                 } else if (state is AdvicerStateError) {
-                  return const ErrorMessage(
-                      Message: "uups something gone wrong!");
+                  return  ErrorMessage(
+                      Message: state.message  //"uups something gone wrong!"
+                      );
                 } else {
                   return const SizedBox();
                 }
