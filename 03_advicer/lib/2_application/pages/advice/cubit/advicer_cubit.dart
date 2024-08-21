@@ -9,8 +9,9 @@ const GeneralFailureMessage = 'Ups ,something gone wrong. Please try again!';
 const serverFailureMessage ='Ups ,API Error. Please try again!';
 const casheFailureMessage ='Ups ,cache failed. Please try again!'; 
 class AdvicerCubit extends Cubit<AdvicerCubtState> {
-  AdvicerCubit() : super(AdvicerInitial());
-  final AdviceUsecases adviceUsecases = AdviceUsecases();
+  final AdviceUsecases adviceUsecases;
+  AdvicerCubit(this.adviceUsecases) : super(AdvicerInitial());
+  
 
   void adviceRequested() async {
     emit(AdvicerStateLooding());
